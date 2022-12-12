@@ -1,9 +1,28 @@
-import React, {Component} from "react";
-import {render} from "react-dom"
+import React from "react";
+import LoginButton from './login-button';
+import LogoutButton from "./logout-button";
+import Profile from './profile';
+import { useAuth0 } from "@auth0/auth0-react";
+
+
 
 export default function App () {
-    return (<h1>Hello world from a functional component</h1>)
-}
+    const { user, isAuthenticated, isLoading } = useAuth0();
 
-const appDiv = document.getElementById("app"); 
-render(<App />, appDiv)
+
+    return (
+        <> 
+
+        { 
+        isAuthenticated ? <LogoutButton />  :  <LoginButton />
+        }
+        
+        <p>{JSON.stringify(user)}</p>
+        
+        <Profile />
+
+        <h1>Hello world from a functional new</h1>        
+        </>
+
+    )
+}
