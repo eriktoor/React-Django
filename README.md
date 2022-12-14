@@ -17,11 +17,10 @@ Clone the repository
 $ git clone https://github.com/your-username/your-project.git
 
 Install the Python dependencies
-$ pip install -r requirements.txt
+$ pip3 install -r music_controller/requirements.txt
 
 Install the Node.js dependencies
 $ npm install
-
 
 Once the dependencies are installed, you can run the development server by using the following commands:
 
@@ -30,7 +29,6 @@ $ python manage.py runserver
 
 Run the React development server
 $ npm run dev
-
 
 This will start the development servers for both Django and React, and you can access the application at http://localhost:8000.
 
@@ -41,5 +39,3 @@ If you would like to contribute to this project, please follow the guidelines in
 ## License
 
 This project is licensed under the terms of the [MIT license](LICENSE.md).
-
-
